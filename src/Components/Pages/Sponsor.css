@@ -1,0 +1,79 @@
+.sponsor-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .sponsor-title {
+    font-size: 2.5rem;
+    color: #b084f7;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  /* Griglia 2 colonne */
+  .sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+    justify-items: center;
+  }
+  
+  /* Card elegante */
+  .sponsor-card {
+    background-color: #111;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .sponsor-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+  }
+  
+  /* Logo proporzionato */
+  .sponsor-logo {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  /* Nome sponsor */
+  .sponsor-name {
+    font-size: 1.1rem;
+    color: #b084f7;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  /* Mobile: una colonna */
+  @media (max-width: 768px) {
+    .sponsor-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .sponsor-title {
+      font-size: 2rem;
+    }
+  
+    .sponsor-card {
+      max-width: 90%;
+    }
+  }

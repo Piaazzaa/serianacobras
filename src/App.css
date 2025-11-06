@@ -1,0 +1,27 @@
+/* === GLOBAL APP STYLES === */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("/src/Graphics/Sfondo/SfondoCobra.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000; /* fallback */
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* App container: lascia trasparente per far vedere lo sfondo */
+.App {
+  background: transparent !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mantieni tutto il resto invariato */
+main {
+  flex: 1;
+}

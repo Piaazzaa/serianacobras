@@ -1,0 +1,155 @@
+.campionato-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .titolo-classifica  {
+    font-size: 2.4rem;
+    color: #b084f7;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .classifica-tabella {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3);
+    text-align: center;
+  }
+  
+  .classifica-tabella th {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .classifica-tabella td {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .classifica-tabella tr:nth-child(1) td {
+    color: gold;
+    font-weight: 600;
+  }
+  .classifica-tabella tr:nth-child(2) td {
+    color: silver;
+    font-weight: 600;
+  }
+  .classifica-tabella tr:nth-child(3) td {
+    color: #cd7f32; /* bronzo */
+    font-weight: 600;
+  }
+  
+  .classifica-tabella tr:hover {
+    background-color: rgba(138, 43, 226, 0.25);
+    transition: background-color 0.2s ease;
+  }
+
+.highlight-cobras {
+    background-color: rgba(138, 43, 226, 0.3) !important; /* viola trasparente */
+    font-weight: 700;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Rende ancora più visibile al passaggio del mouse */
+  .highlight-cobras:hover {
+    background-color: rgba(138, 43, 226, 0.5) !important;
+  }
+
+  /* === RISULTATI === */
+.titolo-risultati {
+  font-size: 2.4rem;
+  color: #b084f7;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  }
+  
+  .risultati-tabella {
+    width: 90%;
+    border-collapse: collapse;
+    background-color: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .risultati-tabella th {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .risultati-tabella td {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .risultati-tabella tr:hover {
+    background-color: rgba(138, 43, 226, 0.25);
+    transition: background-color 0.2s ease;
+  }
+
+/* 🔹 FIX MOBILE FINALE: tutto entra perfettamente */
+@media (max-width: 768px) {
+  table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    font-size: 0.6rem !important; /* leggermente più piccolo */
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 0.2rem 0.15rem !important; /* celle più compatte */
+    text-align: center !important;
+    vertical-align: middle !important;
+    word-break: break-word !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  th {
+    font-size: 0.65rem !important;
+    font-weight: 600;
+  }
+
+  td {
+    font-size: 0.58rem !important;
+  }
+
+  .campionato-title {
+    font-size: 2.4rem !important;   /* uguale a roster-title */
+    color: #b084f7 !important;
+    text-transform: uppercase;
+    margin-bottom: 3rem !important; /* stessa distanza dal contenuto */
+    text-align: center !important;
+  }
+
+  .campionato-container {
+    padding: 3rem 0.8rem !important; /* stesso padding del roster */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

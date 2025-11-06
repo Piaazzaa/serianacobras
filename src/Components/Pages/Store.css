@@ -1,0 +1,62 @@
+.store-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .store-content {
+    background-color: #111;
+    border-radius: 20px;
+    padding: 3rem 4rem;
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    animation: fadeIn 1.2s ease;
+  }
+  
+  .store-icon {
+    color: #b084f7;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+  }
+  
+  .store-title {
+    font-size: 2rem;
+    color: #b084f7;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .store-text {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .store-status {
+    font-size: 1rem;
+    background-color: rgba(176, 132, 247, 0.15);
+    color: #b084f7;
+    padding: 0.6rem 1.5rem;
+    border-radius: 12px;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  /* Effetto pulsazione per l’icona */
+  @keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Fade-in generale */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

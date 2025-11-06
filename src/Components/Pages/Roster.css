@@ -1,0 +1,130 @@
+.roster-container {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.roster-title {
+  font-size: 2.4rem;
+  color: #b084f7;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Sezione di ogni ruolo */
+.role-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 4rem;
+}
+
+.role-title {
+  font-size: 1.8rem;
+  color: #8a2be2;
+  border-bottom: 3px solid #8a2be2;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Riga dei giocatori */
+.players-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centra orizzontalmente */
+  gap: 2rem; /* più spazio tra le card */
+}
+
+/* Card del singolo giocatore */
+.player-card {
+  background-color: #111;
+  border-radius: 20px;
+  width: 250px; /* più grande */
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.player-card:hover {
+  transform: scale(1.06);
+  background-color: rgba(138, 43, 226, 0.25);
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.5);
+}
+
+/* Foto più grande e proporzionata */
+.player-photo {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(176, 132, 247, 0.3);
+}
+
+/* Info testo */
+.player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #b084f7;
+}
+
+.player-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+
+.player-role {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .player-card {
+    width: 220px;
+  }
+
+  .player-photo {
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .players-row {
+    gap: 1.5rem;
+  }
+
+  .player-card {
+    width: 180px;
+  }
+
+  .player-photo {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .player-card {
+    width: 90%;
+  }
+
+  .player-photo {
+    height: 260px;
+  }
+}
