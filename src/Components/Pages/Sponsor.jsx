@@ -1,8 +1,8 @@
 import React from 'react'
-import docLogo from "/Users/enrico/Desktop/Seriana Cobras/src/Graphics/Sponsor/DOC.jpg"
-import moioliLogo from "/Users/enrico/Desktop/Seriana Cobras/src/Graphics/Sponsor/PREFABBRICATI-MOIOLI.jpg"
-import pottoLogo from "/Users/enrico/Desktop/Seriana Cobras/src/Graphics/Sponsor/DJ-Potto.jpg"
-import performance365Logo from "/Users/enrico/Desktop/Seriana Cobras/src/Graphics/Sponsor/PERFORMANCE365.jpg"
+import docLogo from "../../Graphics/Sponsor/DOC.jpg"
+import moioliLogo from "../../Graphics/Sponsor/PREFABBRICATI-MOIOLI.jpg"
+import pottoLogo from "../../Graphics/Sponsor/DJ-Potto.jpg"
+import performance365Logo from "../../Graphics/Sponsor/PERFORMANCE365.jpg"
 import './Sponsor.css'
 
 const sponsors = [

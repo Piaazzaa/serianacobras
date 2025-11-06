@@ -1,5 +1,5 @@
 import React from "react";
-import aboutFoto from "/Users/enrico/Desktop/Seriana Cobras/src/Graphics/FotoAbout/AboutUs.jpeg"
+import aboutFoto from "../../Graphics/FotoAbout/AboutUs.jpeg"
 import "./About.css";
 
 export default function About() {

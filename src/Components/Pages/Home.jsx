@@ -1,5 +1,5 @@
 import React from "react";
-import instagramLogo from "/Users/enrico/Desktop/Seriana Cobras/src/Graphics/Utilità/instagram.png"
+import instagramLogo from "../../Graphics/Utilità/instagram.png"
 import "./Home.css";
 
 export default function Home() {
