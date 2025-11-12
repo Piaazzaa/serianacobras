@@ -42,43 +42,54 @@ const classifica = [
 
 const Campionato = () => {
 
+  // Funzione che ritorna "vittoria", "sconfitta" o "" per ciascun match dei Seriana Cobras
+  const getRisultatoCobras = (match) => {
+    if (match.puntiCasa === "--" || match.puntiOspite === "--") return "";
+
+    const puntiCobras = match.casa === "D.O.C. Seriana Cobras" ? match.puntiCasa : match.puntiOspite;
+    const puntiAvversario = match.casa === "D.O.C. Seriana Cobras" ? match.puntiOspite : match.puntiCasa;
+
+    return puntiCobras > puntiAvversario ? "vittoria" : "sconfitta";
+  };
+
   return (
     <div className="campionato-container">
       <h1 className="titolo-classifica">Classifica</h1>
-        <table className="classifica-tabella">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Squadra</th>
-              <th>Pt</th>
-              <th>Pg</th>
-              <th>V</th>
-              <th>S</th>
-              <th>PF</th>
-              <th>PS</th>
-              <th>Diff</th>
+      <table className="classifica-tabella">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Squadra</th>
+            <th>Pt</th>
+            <th>Pg</th>
+            <th>V</th>
+            <th>S</th>
+            <th>PF</th>
+            <th>PS</th>
+            <th>Diff</th>
+          </tr>
+        </thead>
+        <tbody>
+          {classifica.map((team) => (
+            <tr
+              key={team.posizione}
+              className={team.squadra === "D.O.C. Seriana Cobras" ? "highlight-cobras" : ""}
+            >
+              <td>{team.posizione}</td>
+              <td>{team.squadra}</td>
+              <td>{team.punti}</td>
+              <td>{team.giocate}</td>
+              <td>{team.vinte}</td>
+              <td>{team.perse}</td>
+              <td>{team.puntiFatti}</td>
+              <td>{team.puntiSubiti}</td>
+              <td>{team.diff}</td>
             </tr>
-          </thead>
-          <tbody>
-            {classifica.map((team) => (
-              <tr
-                key={team.posizione}
-                className={team.squadra === "D.O.C. Seriana Cobras" ? "highlight-cobras" : ""}
-              >
-                <td>{team.posizione}</td>
-                <td>{team.squadra}</td>
-                <td>{team.punti}</td>
-                <td>{team.giocate}</td>
-                <td>{team.vinte}</td>
-                <td>{team.perse}</td>
-                <td>{team.puntiFatti}</td>
-                <td>{team.puntiSubiti}</td>
-                <td>{team.diff}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-     <h2 className="titolo-risultati">Risultati</h2>
+          ))}
+        </tbody>
+      </table>
+
+      <h2 className="titolo-risultati">Risultati</h2>
       <table className="risultati-tabella">
         <thead>
           <tr>
@@ -92,23 +103,28 @@ const Campionato = () => {
           </tr>
         </thead>
         <tbody>
-          {risultati.map((match) => (
-            <tr
-              key={match.numero}
-            >
-              <td>{match.numero}</td>
-              <td>{match.data}</td>
-              <td>{match.ora}</td>
-              <td>{match.casa}</td>
-              <td>{match.puntiCasa}</td>
-              <td>{match.puntiOspite}</td>
-              <td>{match.ospite}</td>
-            </tr>
-          ))}
+          {risultati.map((match) => {
+            const classeRisultato = 
+              match.casa === "D.O.C. Seriana Cobras" || match.ospite === "D.O.C. Seriana Cobras" 
+                ? getRisultatoCobras(match)
+                : "";
+
+            return (
+              <tr key={match.numero} className={classeRisultato}>
+                <td>{match.numero}</td>
+                <td>{match.data}</td>
+                <td>{match.ora}</td>
+                <td>{match.casa}</td>
+                <td>{match.puntiCasa}</td>
+                <td>{match.puntiOspite}</td>
+                <td>{match.ospite}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
-     </div>
-  )
-}
+    </div>
+  );
+};
 
 export default Campionato
