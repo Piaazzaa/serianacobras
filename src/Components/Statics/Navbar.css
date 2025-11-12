@@ -117,3 +117,228 @@ html, body {
     font-size: 1.05rem;
   }
 }
+
+/* === HAMBURGER BUTTON (solo mobile) === */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* === MENU MOBILE A GRIGLIA === */
+.mobile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: inherit; /* mantiene il colore originale */
+  animation: fadeDown 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-grid a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  padding: 0.8rem 0;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.mobile-grid a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Animazione */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === SOLO SU MOBILE === */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none !important;
+  }
+}
+
+/* === STRUTTURA MOBILE === */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* logo a sx, hamburger a dx */
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .team-logo {
+    width: 40px; /* dimensione ridotta per mobile */
+    height: auto;
+  }
+
+  .brand {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .navbar-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .navbar-links {
+    display: none !important;
+  }
+
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: inherit;
+    text-align: center;
+    animation: fadeDown 0.3s ease;
+  }
+
+  .mobile-grid a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    padding: 0.8rem 0;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+
+  .mobile-grid a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+ /* === FIX POSIZIONE LOGO E HAMBURGER SU MOBILE === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-bottom: 0 !important;
+  }
+
+  .navbar-left {
+    margin-bottom: 0 !important;
+  }
+
+  .mobile-grid {
+    margin-top: 0.5rem;
+  }
+}
+ /* === INGRANDISCI LA NAVBAR SU MOBILE === */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.9rem 1.2rem !important; /* più spazio verticale */
+  }
+
+  .team-logo {
+    height: 50px !important; /* logo leggermente più grande */
+  }
+
+  .brand {
+    font-size: 1rem !important; /* testo un po’ più leggibile */
+  }
+
+  .navbar-toggle {
+    font-size: 2rem !important; /* hamburger un po’ più visibile */
+  }
+}
+
+/* === TENDINA MOBILE TRASPARENTE A COLONNA === */
+.mobile-grid {
+  position: absolute;
+  top: 100%; /* subito sotto la navbar */
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* 🔹 elementi in verticale */
+  align-items: stretch; /* ogni voce larga quanto la navbar */
+  gap: 0.4rem;
+  padding: 0.6rem 0;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.7); /* sfondo trasparente */
+  backdrop-filter: blur(6px); /* effetto vetro */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  animation: fadeDown 0.3s ease;
+
+  z-index: 998;
+}
+
+.mobile-grid a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.9rem 0;
+  transition: background 0.2s;
+  border-radius: 0; /* voci a blocco */
+}
+
+.mobile-grid a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Animazione */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-logo {
+      height: 50px;   /* altezza fissa desiderata */
+      width: auto;    /* mantiene le proporzioni */
+      object-fit: contain; /* assicura che non si ritagli */
+  }
+}
