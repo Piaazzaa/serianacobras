@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.33bd00c9.css",
-    "main.js": "/static/js/main.c6f70b48.js",
+    "main.css": "/static/css/main.0a12f795.css",
+    "main.js": "/static/js/main.45b5f789.js",
     "static/js/453.4cbef329.chunk.js": "/static/js/453.4cbef329.chunk.js",
     "static/media/LogoCobras.JPG": "/static/media/LogoCobras.024781080573d9e16d61.JPG",
     "static/media/SfondoCobra.jpg": "/static/media/SfondoCobra.8a5fbb896103875a6029.jpg",
@@ -25,12 +25,12 @@
     "static/media/DJ-Potto.jpg": "/static/media/DJ-Potto.4697dbb1d371cc651b55.jpg",
     "static/media/PREFABBRICATI-MOIOLI.jpg": "/static/media/PREFABBRICATI-MOIOLI.7f8bfa57082c3ab75dad.jpg",
     "index.html": "/index.html",
-    "main.33bd00c9.css.map": "/static/css/main.33bd00c9.css.map",
-    "main.c6f70b48.js.map": "/static/js/main.c6f70b48.js.map",
+    "main.0a12f795.css.map": "/static/css/main.0a12f795.css.map",
+    "main.45b5f789.js.map": "/static/js/main.45b5f789.js.map",
     "453.4cbef329.chunk.js.map": "/static/js/453.4cbef329.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33bd00c9.css",
-    "static/js/main.c6f70b48.js"
+    "static/css/main.0a12f795.css",
+    "static/js/main.45b5f789.js"
   ]
 }
