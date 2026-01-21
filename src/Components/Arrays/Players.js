@@ -11,6 +11,8 @@ import vito from '../../Graphics/FotoGiocatori/Vito.jpeg'
 import moio from '../../Graphics/FotoGiocatori/Moio.jpeg'
 import berto from '../../Graphics/FotoGiocatori/Berto.jpeg'
 import poma from '../../Graphics/FotoGiocatori/Poma.jpeg'
+import castro from '../../Graphics/FotoGiocatori/Castro.jpeg'
+import belo from '../../Graphics/FotoGiocatori/Belo.jpeg'
 
 const Players = 
 [
@@ -104,6 +106,20 @@ const Players =
         number : 2,
         position : "Coach",
         photo : zanna
+    },
+    {
+        name : "Davide",
+        surname : "Castrovinci",
+        number : 10,
+        position : "Ala",
+        photo : castro
+    },
+    {
+        name : "Simone",
+        surname : "Belotti",
+        number : 25,
+        position : "Centro",
+        photo : belo
     }
 ]
 

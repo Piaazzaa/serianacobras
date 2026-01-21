@@ -8,10 +8,10 @@ const risultati = [
   { numero: 4, data: "07/11/2025", ora: "21:30", casa: "Colognola 46ers", puntiCasa: 50, puntiOspite: 58, ospite: "D.O.C. Seriana Cobras" },
   { numero: 5, data: "14/11/2025", ora: "20:30", casa: "D.O.C. Seriana Cobras", puntiCasa: 72, puntiOspite: 75, ospite: "Potascè Baket" },
   { numero: 6, data: "20/11/2025", ora: "21:15", casa: "Pol. Villese", puntiCasa: "--", puntiOspite: "--", ospite: "D.O.C. Seriana Cobras" },
-  { numero: 7, data: "27/11/2025", ora: "21:15", casa: "69ers Grumello", puntiCasa: "--", puntiOspite: "--", ospite: "D.O.C. Seriana Cobras" },
-  { numero: 8, data: "05/12/2025", ora: "20:30", casa: "D.O.C. Seriana Cobras", puntiCasa: "--", puntiOspite: "--", ospite: "Fervens Vertova" },
-  { numero: 9, data: "11/12/2025", ora: "21:30", casa: "Boca Lions 89", puntiCasa: "--", puntiOspite: "--", ospite: "D.O.C. Seriana Cobras" },
-  { numero: 10, data: "19/12/2025", ora: "20:30", casa: "D.O.C. Seriana Cobras", puntiCasa: "--", puntiOspite: "--", ospite: "Sebino Basket" },
+  { numero: 7, data: "27/11/2025", ora: "21:15", casa: "69ers Grumello", puntiCasa: 53, puntiOspite: 45, ospite: "D.O.C. Seriana Cobras" },
+  { numero: 8, data: "05/12/2025", ora: "20:30", casa: "D.O.C. Seriana Cobras", puntiCasa: 75, puntiOspite: 78, ospite: "Fervens Vertova" },
+  { numero: 9, data: "11/12/2025", ora: "21:30", casa: "Boca Lions 89", puntiCasa: 56, puntiOspite: 74, ospite: "D.O.C. Seriana Cobras" },
+  { numero: 10, data: "19/12/2025", ora: "20:30", casa: "D.O.C. Seriana Cobras", puntiCasa: 73, puntiOspite: 85, ospite: "Sebino Basket" },
   { numero: 11, data: "Riposo", ora: "Riposo", casa: "Riposo", puntiCasa: "Riposo", puntiOspite: "Riposo", ospite: "Riposo" },
   { numero: 12, data: "30/01/2026", ora: "21:30", casa: "Vall'Alta", puntiCasa: "--", puntiOspite: "--", ospite: "D.O.C. Seriana Cobras" },
   { numero: 13, data: "06/02/2026", ora: "20:30", casa: "D.O.C. Seriana Cobras", puntiCasa: "--", puntiOspite: "--", ospite: "Scanzorosciate" },
@@ -27,17 +27,17 @@ const risultati = [
 ];
 
 const classifica = [
-  { posizione: 1, squadra: "Aspo Pontoglio", punti: 18, giocate: 6, vinte: 6, perse: 0, puntiFatti: 397, puntiSubiti: 318, diff: 79 },
-  { posizione: 2, squadra: "Scanzorosciate", punti: 15, giocate: 6, vinte: 5, perse: 1, puntiFatti: 403, puntiSubiti: 353, diff: 50 },
-  { posizione: 3, squadra: "Pol. Villese", punti: 12, giocate: 4, vinte: 4, perse: 0, puntiFatti: 239, puntiSubiti: 172, diff: 67 },
-  { posizione: 4, squadra: "69ers Grumello", punti: 12, giocate: 5, vinte: 4, perse: 1, puntiFatti: 286, puntiSubiti: 252, diff: 34 },
-  { posizione: 5, squadra: "Fervens Vertova", punti: 9, giocate: 5, vinte: 3, perse: 2, puntiFatti: 331, puntiSubiti: 329, diff: 2 },
-  { posizione: 6, squadra: "D.O.C. Seriana Cobras", punti: 6, giocate: 5, vinte: 2, perse: 3, puntiFatti: 347, puntiSubiti: 307, diff: 40},
-  { posizione: 7, squadra: "Sebino Basket", punti: 6, giocate: 5, vinte: 2, perse: 3, puntiFatti: 302, puntiSubiti: 286, diff: 16 },
-  { posizione: 8, squadra: "Potascè Baket", punti: 3, giocate: 5, vinte: 1, perse: 4, puntiFatti: 275, puntiSubiti: 311, diff: -36 },
-  { posizione: 9, squadra: "Vall'Alta", punti: 3, giocate: 5, vinte: 1, perse: 4, puntiFatti: 270, puntiSubiti: 314, diff: -44 },
-  { posizione: 10, squadra: "Colognola 46ers", punti: 0, giocate: 5, vinte: 0, perse: 5, puntiFatti: 234, puntiSubiti: 296, diff: -62 },
-  { posizione: 11, squadra: "Boca Lions 89", punti: 0, giocate: 5, vinte: 0, perse: 5, puntiFatti: 193, puntiSubiti: 339, diff: -146 }
+  { posizione: 1, squadra: "Aspo Pontoglio", punti: 24, giocate: 9, vinte: 8, perse: 1, puntiFatti: 609, puntiSubiti: 512, diff: 97 },
+  { posizione: 2, squadra: "Pol. Villese", punti: 18, giocate: 7, vinte: 6, perse: 1, puntiFatti: 424, puntiSubiti: 343, diff: 81 },
+  { posizione: 3, squadra: "Scanzorosciate", punti: 18, giocate: 8, vinte: 6, perse: 2, puntiFatti: 559, puntiSubiti: 506, diff: 53 },
+  { posizione: 4, squadra: "69ers Grumello", punti: 18, giocate: 9, vinte: 6, perse: 3, puntiFatti: 513, puntiSubiti: 477, diff: 36 },
+  { posizione: 5, squadra: "Fervens Vertova", punti: 18, giocate: 9, vinte: 6, perse: 3, puntiFatti: 608, puntiSubiti: 602, diff: 6 },
+  { posizione: 6, squadra: "Sebino Basket", punti: 15, giocate: 8, vinte: 5, perse: 3, puntiFatti: 513, puntiSubiti: 475, diff: 38 },
+  { posizione: 7, squadra: "D.O.C. Seriana Cobras", punti: 9, giocate: 9, vinte: 3, perse: 6, puntiFatti: 614, puntiSubiti: 579, diff: 35},
+  { posizione: 8, squadra: "Colognola 46ers", punti: 6, giocate: 8, vinte: 2, perse: 6, puntiFatti: 391, puntiSubiti: 438, diff: -47 },
+  { posizione: 9, squadra: "Boca Lions 89", punti: 6, giocate: 9, vinte: 2, perse: 7, puntiFatti: 407, puntiSubiti: 572, diff: -165 },
+  { posizione: 10, squadra: "Potascè Baket", punti: 3, giocate: 8, vinte: 1, perse: 7, puntiFatti: 432, puntiSubiti: 487, diff: -55 },
+  { posizione: 11, squadra: "Vall'Alta", punti: 3, giocate: 8, vinte: 1, perse: 7, puntiFatti: 447, puntiSubiti: 526, diff: -79 }
 ];
 
 const Campionato = () => {
