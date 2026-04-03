@@ -11,6 +11,7 @@ import About from './Components/Pages/About'
 import Sponsor from './Components/Pages/Sponsor'
 import Contacts from './Components/Pages/Contacts'
 import Home from "./Components/Pages/Home";
+import Torneo from "./Components/Pages/Torneo";
 
 import PrivacyPolicy from "./Components/Legals/PrivacyPolicy";
 import CookiePolicy from "./Components/Legals/CookiePolicy";
@@ -42,6 +43,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/campionato' element={Campionato ? <Campionato /> : <Placeholder title="Campionato" />} />
+            <Route path='/torneo' element={Torneo ? <Torneo /> : <Placeholder title="Torneo" />} />
             <Route path="/roster" element={Roster ? <Roster /> : <Placeholder title="Roster" />} />
             <Route path="/store" element={Store ? <Store /> : <Placeholder title="Store" />} />
             <Route path="/about" element={About ? <About /> : <Placeholder title="About" />} />

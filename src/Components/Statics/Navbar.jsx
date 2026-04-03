@@ -37,8 +37,9 @@ const Navbar = () => {
 
         { !isMobile && ( 
           <ul className="navbar-links">
-            <li><NavLink to="/" end>Home</NavLink></li>
-            <li><NavLink to="/campionato" end>Campionato</NavLink></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/campionato">Campionato</NavLink></li>
+            <li><NavLink to="/torneo">Torneo</NavLink></li>
             <li><NavLink to="/roster">Squadra</NavLink></li>
             <li><NavLink to="/store">Store</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
@@ -51,6 +52,7 @@ const Navbar = () => {
           <div className="mobile-grid">
             <div className="grid-item"><a href="/">Home</a></div>
             <div className="grid-item"><a href="/campionato">Campionato</a></div>
+            <div className="grid-item"><a href="/torneo">Torneo</a></div>
             <div className="grid-item"><a href="/roster">Squadra</a></div>
             <div className="grid-item"><a href="/store">Store</a></div>
             <div className="grid-item"><a href="/about">About</a></div>

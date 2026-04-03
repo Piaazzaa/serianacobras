@@ -1,0 +1,90 @@
+.torneo {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 🔥 importante */
+  padding: 80px 10px 40px;
+  box-sizing: border-box;
+}
+
+.torneo-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.torneo form {
+  max-width: 600px;
+  width: 100%;
+  background-color: #111;
+  padding: 25px 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.3);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.torneo-title {
+  color: #b084f7;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.torneo form .input-box {
+  margin-top: 20px;
+}
+
+.input-box .field {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #b084f7;
+  outline: none;
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 16px;
+  color: white;
+  margin-top: 8px;
+}
+
+.input-box .field.mess {
+  height: 200px;
+  resize: none;
+}
+
+.torneo form button {
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 25px;
+  background-color: #6a0dad;
+}
+
+form button:hover {
+  background: #b084f7;
+}
+
+@media (max-width: 768px) {
+  .torneo {
+    padding: 30px 10px 30px;
+  }
+
+  .torneo form {
+    max-width: 100%;
+  }
+
+  input[type="date"] {
+    -webkit-appearance: none; /* 🔥 chiave */
+    appearance: none;
+  }
+}
