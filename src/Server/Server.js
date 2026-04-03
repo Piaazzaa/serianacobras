@@ -13,7 +13,7 @@ app.use(cors({
 // ✅ Upload config
 const upload = multer({
   dest: "uploads/",
-  limits: { fileSize: 20 * 1024 * 1024  }
+  limits: { fileSize: 3 * 1024 * 1024  }
 });
 
 // ✅ Endpoint
