@@ -10,7 +10,7 @@ const Torneo = () => {
   const formData = new FormData(event.target);
 
   try {
-    const res = await fetch("http://localhost:5001/send-email", {
+    const res = await fetch("https://serianacobras.onrender.com/send-email", {
       method: "POST",
       body: formData,
     });
@@ -174,7 +174,7 @@ const Torneo = () => {
 
           <div className="input-box">
             <label>Data di nascita</label>
-            <input type="date" name="player5_birth" className="field" required />
+            <input type="date" name="player5_birth" className="field" />
           </div>
 
           <div className="input-box">
@@ -184,7 +184,6 @@ const Torneo = () => {
               name="player5_medical"
               className="field"
               accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.pages"
-              required
             />
           </div>
 

@@ -7,7 +7,7 @@ const app = express();
 
 // ✅ CORS (aggiornato alla nuova porta React)
 app.use(cors({
-  origin: "http://localhost:3000"
+  origin: "https://serianacobras.com"
 }));
 
 // ✅ Upload config
