@@ -33,9 +33,9 @@ app.post(
 
       const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
-        port: 587,
-        secure: false,
-        family: 4, // 🔥 FIX CRUCIALE
+        port: 465,
+        secure: true,
+        family: 4,
         auth: {
           user: "docserianacobras@gmail.com",
           pass: "erfb jrqb jsbr hrcl",
