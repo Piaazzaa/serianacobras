@@ -74,6 +74,9 @@ app.post(
             Nome: ${req.body.player5_name}
             Data di nascita: ${req.body.player5_birth}
 
+            privacy: ${req.body.privacy}
+            foto: ${req.body.photos}
+
             --- FINE ISCRIZIONE ---`,
         attachments: Object.values(req.files).flat().map((file) => ({
           filename: file.originalname,

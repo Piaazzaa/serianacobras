@@ -36,7 +36,20 @@ const Torneo = () => {
           <h1 className="contact-title">Torneo Seriana Cobras</h1>
 
           <p style={{ textAlign: "center", marginBottom: "30px" }}>
-            Inserisci qui la descrizione del torneo, regolamento e informazioni.
+            Bentrovati nell'apposita sezione relativa al primo torneo targato Cobras! 🐍 <br />
+            Ecco alcune informazioni generali riguardo la manifestazione: <br /> <br />
+            - Data 20 Giugno dalle ore 13 alle ore 19 <br />
+            - Palazzetto dello Sport di Albino (BG) <br />
+            - 18+ <br />
+            - Visita medica agonistica obbligatoria <br />
+            - Massimo 5 giocatori per squadra <br />
+            - Quota di iscrizione 15 € a giocatore <br /> <br />
+            Cosa è incluso: <br /> <br />
+            - Assicurazione medica <br />
+            - 1 drink omaggio offerto da Tiki Beach ItalianOptic <br />
+            - Disponibilità degli spogliatoi interni per docce <br />
+            - Premi per le prime 3 squadre classificate <br /> <br />
+            Qua sotto troverete il modulo dove inserire tutte le informazioni richieste e allegare la visita medica per completare l'iscrizione al torneo! 💜🖤
           </p>
 
           {/* SEZIONE 1 */}
@@ -185,6 +198,26 @@ const Torneo = () => {
               className="field"
               accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.pages"
             />
+          </div>
+
+          <div className="checkbox-box">
+            <input type="checkbox" id="privacy" required />
+            <label htmlFor="privacy">
+              Dichiaro di aver letto e accettato la{" "}
+              <a href="/privacy-policy" target="_blank" rel="noreferrer">
+                Privacy Policy
+              </a>{" "}
+              e acconsento al trattamento dei dati personali, inclusi dati sanitari,
+              per l’iscrizione al torneo
+            </label>
+          </div>
+
+          <div className="checkbox-box">
+            <input type="checkbox" id="photos" required  />
+            <label>
+              Autorizzo l’utilizzo di immagini e video realizzati durante il torneo per finalità
+              promozionali dell’associazione
+            </label>
           </div>
 
           <button type="submit">Invia iscrizione</button>

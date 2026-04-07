@@ -74,6 +74,24 @@ form button:hover {
   background: #b084f7;
 }
 
+.checkbox-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.checkbox-box input {
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.checkbox-box label {
+  line-height: 1.4;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .torneo {
     padding: 30px 10px 30px;
