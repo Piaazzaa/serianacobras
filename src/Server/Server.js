@@ -32,7 +32,10 @@ app.post(
       console.log("FILES:", req.files);
 
       const transporter = nodemailer.createTransport({
-        service: "gmail",
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
+        family: 4, // 🔥 FIX CRUCIALE
         auth: {
           user: "docserianacobras@gmail.com",
           pass: "erfb jrqb jsbr hrcl",
