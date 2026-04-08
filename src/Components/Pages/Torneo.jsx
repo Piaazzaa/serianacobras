@@ -201,7 +201,7 @@ const Torneo = () => {
           </div>
 
           <div className="checkbox-box">
-            <input type="checkbox" id="privacy" required />
+            <input type="checkbox" name="privacy" required />
             <label htmlFor="privacy">
               Dichiaro di aver letto e accettato la{" "}
               <a href="/privacy-policy" target="_blank" rel="noreferrer">
@@ -213,7 +213,7 @@ const Torneo = () => {
           </div>
 
           <div className="checkbox-box">
-            <input type="checkbox" id="photos" required  />
+            <input type="checkbox" name="photos" required  />
             <label>
               Autorizzo l’utilizzo di immagini e video realizzati durante il torneo per finalità
               promozionali dell’associazione

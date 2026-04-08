@@ -12,15 +12,15 @@ app.use(cors({
 }));
 
 // 🔑 Resend
-const resend = new Resend('re_K7xmN83A_AkLcYVAJRTNeL5Z9mNmX3BC6');
+const resend = new Resend("re_K7xmN83A_AkLcYVAJRTNeL5Z9mNmX3BC6");
 
 // 📎 Upload config
 const upload = multer({
   dest: "uploads/",
-  limits: { fileSize: 3 * 1024 * 1024 } // 3MB per file
+  limits: { fileSize: 5 * 1024 * 1024 } // 5MB
 });
 
-// 🧪 TEST SERVER
+// 🧪 TEST
 app.get("/test", (req, res) => {
   res.send("Server attivo 🚀");
 });
@@ -37,20 +37,28 @@ app.post(
   ]),
   async (req, res) => {
     try {
-      console.log("BODY:", req.body);
-      console.log("FILES:", req.files);
+      console.log("📩 Nuova richiesta");
 
-      // 📎 Prepara allegati
-      const attachments = Object.values(req.files || {})
-        .flat()
-        .map(file => ({
-          filename: file.originalname,
-          content: fs.readFileSync(file.path),
-        }));
+      // 📎 ALLEGATI (NO DUPLICATI)
+      const attachments = [];
 
-      // 📧 INVIO EMAIL
-      await resend.emails.send({
-        from: "torneo@serianacobras.com", // 🔥 poi puoi cambiarlo con dominio tuo
+      for (const field in req.files) {
+        const file = req.files[field][0];
+
+        if (file) {
+          attachments.push({
+            filename: file.originalname,
+            content: fs.readFileSync(file.path).toString("base64"),
+            encoding: "base64",
+          });
+        }
+      }
+
+      console.log("📎 Allegati:", attachments.length);
+
+      // 📧 INVIO
+      const response = await resend.emails.send({
+        from: "torneo@serianacobras.com",
         to: "docserianacobras@gmail.com",
         subject: "Iscrizione torneo",
         text: `
@@ -77,31 +85,36 @@ Nome: ${req.body.player3_name}
 Data di nascita: ${req.body.player3_birth}
 
 👥 GIOCATORE 4
-Nome: ${req.body.player4_name}
-Data di nascita: ${req.body.player4_birth}
+Nome: ${req.body.player4_name || "-"}
+Data di nascita: ${req.body.player4_birth || "-"}
 
 👥 GIOCATORE 5
-Nome: ${req.body.player5_name}
-Data di nascita: ${req.body.player5_birth}
+Nome: ${req.body.player5_name || "-"}
+Data di nascita: ${req.body.player5_birth || "-"}
 
-✅ Privacy: ${req.body.privacy}
-📸 Foto: ${req.body.photos}
+✅ Privacy: ${req.body.privacy ? "Accettata" : "No"}
+📸 Foto: ${req.body.photos ? "Accettate" : "No"}
 
 --- FINE ISCRIZIONE ---
         `,
-        attachments: attachments,
+        attachments,
       });
 
-      // 🧹 Cancella file dopo invio
-      Object.values(req.files || {}).flat().forEach(file => {
-        fs.unlinkSync(file.path);
-      });
+      console.log("✅ Email inviata:", response);
+
+      // 🧹 PULIZIA FILE
+      for (const field in req.files) {
+        const file = req.files[field][0];
+        if (file) {
+          fs.unlinkSync(file.path);
+        }
+      }
 
       res.json({ success: true });
 
     } catch (error) {
-      console.error("ERRORE INVIO EMAIL:", error);
-      res.json({ success: false });
+      console.error("❌ ERRORE:", error);
+      res.status(500).json({ success: false });
     }
   }
 );
@@ -110,5 +123,5 @@ Data di nascita: ${req.body.player5_birth}
 const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
