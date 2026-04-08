@@ -33,7 +33,7 @@ const Torneo = () => {
       <div className="torneo-form">
 
         <form onSubmit={onSubmit}>
-          <h1 className="contact-title">Torneo Seriana Cobras</h1>
+          <h1 className="torneo-title">Cobras Summer Cup</h1>
 
           <p style={{ textAlign: "center", marginBottom: "30px" }}>
             Bentrovati nell'apposita sezione relativa al primo torneo targato Cobras! 🐍 <br />
