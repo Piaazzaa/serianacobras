@@ -12,7 +12,7 @@ export default function Roster() {
 
   return (
     <div className="roster-container">
-      <h1 className="roster-title">Squadra 2025/2026</h1>
+      <h1 className="roster-title">Squadra 2026/2027</h1>
 
       {Object.entries(groupedPlayers).map(([position, group]) => (
         <div key={position} className="role-section">

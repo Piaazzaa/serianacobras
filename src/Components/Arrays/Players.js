@@ -54,13 +54,6 @@ const Players =
         photo : gualo
     },     
     {
-        name : "Luca",
-        surname : "Mazzoleni",
-        number : 8,
-        position : "Centro",
-        photo : mazzo
-    },
-    {
         name : "Marco",
         surname : "Moioli",
         number : 24,
@@ -129,6 +122,13 @@ const Players =
         number : 25,
         position : "Centro",
         photo : belo
+    },
+    {
+        name : "Luca",
+        surname : "Mazzoleni",
+        number : 8,
+        position : "Vecchie Glorie",
+        photo : mazzo
     }
 ]
 
