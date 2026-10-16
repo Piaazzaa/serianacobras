@@ -13,6 +13,8 @@ import berto from '../../Graphics/FotoGiocatori/Berto.jpeg'
 import poma from '../../Graphics/FotoGiocatori/Poma.jpeg'
 import castro from '../../Graphics/FotoGiocatori/Castro.jpeg'
 import belo from '../../Graphics/FotoGiocatori/Belo.jpeg'
+import pulcio from '../../Graphics/FotoGiocatori/Pulcio.jpeg'
+
 
 const Players = 
 [
@@ -29,6 +31,13 @@ const Players =
         number : 30,
         position : "Playmaker",
         photo : berto
+    },
+    {
+        name : "Marco",
+        surname : "Pulcini",
+        number : 8,
+        position : "Playmaker",
+        photo : pulcio
     },
     {
         name : "Michele",
